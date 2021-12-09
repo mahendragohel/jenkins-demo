@@ -20,3 +20,18 @@ pipelineJob('spring-boot-api-example') {
         }
     }
 }
+
+pipelineJob('kafka-example') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/mahendragohel/maven-docker-example.git'
+                    }
+                    branch 'master'
+                }
+            }
+        }
+    }
+}
